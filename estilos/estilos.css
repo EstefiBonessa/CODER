@@ -88,11 +88,12 @@ a.menu_item:hover {
   text-decoration: line-through;
   transition-delay: 2s; }
 
-footer, p {
+footer {
   font-weight: 300;
   font-size: 11px;
   letter-spacing: 2px;
-  line-height: 20px; }
+  line-height: 20px;
+  text-align: center; }
 
 .slider__portada {
   background-color: black;
@@ -253,7 +254,7 @@ ul li:hover ul {
   margin: 0; }
 
 .grafica {
-  height: 87vh;
+  height: 88vh;
   overflow: scroll; }
 
 .contenedor {
@@ -278,7 +279,7 @@ ul li:hover ul {
   width: 27vw;
   padding-left: 10px;
   text-align: justify;
-  height: 87vh;
+  height: 88vh;
   overflow: scroll; }
 
 .titulo {
@@ -293,6 +294,12 @@ ul li:hover ul {
   margin-top: 5px;
   margin-bottom: 5px; }
 
+p {
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 2px;
+  line-height: 20px; }
+
 .descripcion::-webkit-scrollbar {
   width: 5px; }
 
@@ -301,6 +308,7 @@ ul li:hover ul {
   border-radius: 2px; }
 
 /*PARA HACERLO RESPONSIVE EN PANTALLAS MAS PEQUEÑAS*/
+/*----------------portada---------------*/
 @media only screen and (max-width: 1150px) {
   h2 {
     padding-left: 40%; }
@@ -308,7 +316,7 @@ ul li:hover ul {
     padding-left: 40.1%; } }
 
 @media only screen and (max-width: 1000px) {
-  .portada {
+  .slider__portada {
     background-color: black;
     width: 100%;
     /*height: 100vh;*/
@@ -337,6 +345,7 @@ ul li:hover ul {
     padding-left: 30.1%;
     display: flex;
     object-position: center; }
+  /*----------------teatro---------------*/
   .galeriaImagenes {
     display: grid;
     padding-top: 50px;
@@ -349,9 +358,22 @@ ul li:hover ul {
     padding: 0;
     margin: 0; }
   .fondo {
-    padding-top: 15%; } }
+    padding-top: 15%; }
+  /* PÁGINAS DE CADA OBRA*/
+  .picture {
+    width: 55vw;
+    padding: 0;
+    margin: 0;
+    overflow: scroll; }
+  .descripcion {
+    width: 40vw;
+    padding-left: 10px;
+    text-align: justify;
+    height: 88vh;
+    overflow: scroll; } }
 
 @media only screen and (max-width: 768px) {
+  /*----------------portada---------------*/
   h1 {
     font-weight: 700;
     font-size: 15px;
@@ -360,17 +382,16 @@ ul li:hover ul {
     padding-left: 15%;
     display: inline-block;
     object-position: center; }
-  .portada {
+  .slider__portada {
     background-color: black;
     width: 100%;
     /*height: 100%;*/
-    background-image: url(../imagenes/anomaliam.jpg);
+    background-image: url(../imagenes/anomalia1.jpg);
     background-size: contain;
     background-repeat: no-repeat; }
   .seccion_animacion {
-    width: 70%;
+    width: 50%;
     margin-top: 10%;
-    margin-bottom: 10%;
     float: right; }
   h2 {
     color: #ffffff;
@@ -389,6 +410,7 @@ ul li:hover ul {
     padding-left: 10.1%;
     display: flex;
     object-position: center; }
+  /*----------------teatro---------------*/
   .galeriaImagenes {
     display: grid;
     padding-top: 50px;
@@ -401,7 +423,36 @@ ul li:hover ul {
     padding: 0;
     margin: 0; }
   #carouselExampleInterval {
-    height: 500%; } }
+    height: 500%; }
+  /*----------------publi---------------*/
+  .galeriaImagenes1 {
+    background-color: #ffffff;
+    display: grid;
+    padding-top: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    align-items: end;
+    justify-items: center;
+    overflow: hidden; }
+    .galeriaImagenes1 .image {
+      max-width: 90vw;
+      padding: 0;
+      margin: 0;
+      overflow: hidden; } }
+
+/* PÁGINAS DE CADA OBRA*/
+.picture {
+  width: 55vw;
+  padding: 0;
+  margin: 0;
+  overflow: scroll; }
+
+.descripcion {
+  width: 40vw;
+  padding-left: 10px;
+  text-align: justify;
+  height: 88vh;
+  overflow: scroll; }
 
 /* PAGINA DE CONTACTO*/
 .idioma {
@@ -452,7 +503,7 @@ ul li:hover ul {
     padding-left: 0%;
     display: inline-block;
     object-position: center; }
-  .portada {
+  .slider__portada {
     background-color: black;
     width: 100%;
     /*height: 100%;*/
@@ -498,32 +549,24 @@ ul li:hover ul {
       max-width: 90vw;
       padding: 0;
       margin: 0;
-      overflow: hidden; } }
-
-/*ESPECIFICO DE LA PÁGINA DE PUBLI*/
-/*.publi{
-	padding-top: 50px;
-	width: 100vw;
-	display: flex;
-
-	
-}
-
-.videos{
-	height: 65vh;
-	
-}
-	
-.detalle{
-	width: 27vw; 
-	padding: 10px 20px;
-	text-align: justify;
-	height: 65vh;
-	
-}*/
-/*.obra{
-	padding: 0px;
-	margin: 0;
-	overflow: hidden;
-
-}*/
+      overflow: hidden; }
+  /*-----------------PAGINA DE CADA OBRA Y PERFIL --------------*/
+  .detail {
+    width: 100vw;
+    display: flex;
+    padding-top: 8vh;
+    margin: 0;
+    flex-direction: column-reverse; }
+  .grafica {
+    width: 100vw;
+    height: 50vh;
+    overflow: scroll; }
+  .picture {
+    width: 100vw;
+    padding: 0;
+    margin: 0; }
+  .descripcion {
+    width: 90vw;
+    padding-left: 10px;
+    text-align: justify;
+    height: 88vh; } }

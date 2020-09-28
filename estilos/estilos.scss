@@ -118,6 +118,8 @@ footer{
 	font-size: 11px; 
 	letter-spacing: 2px;
 	line-height: 20px;
+	text-align: center;
+
 }
 
 
@@ -323,7 +325,7 @@ ul li:hover ul{
 }
 
 .grafica{
-	height: 87vh;
+	height: 88vh;
 	overflow: scroll;
 }
 
@@ -354,7 +356,7 @@ ul li:hover ul{
 	width: 27vw; 
 	padding-left: 10px;
 	text-align: justify;
-	height: 87vh;
+	height: 88vh;
 	overflow: scroll;
 }
 
@@ -373,8 +375,13 @@ ul li:hover ul{
 }
 
 p {
-	@extend footer;
+	
+	font-weight: 300; 
+	font-size: 12px; 
+	letter-spacing: 2px;
+	line-height: 20px;
 }
+
 
 .descripcion::-webkit-scrollbar{
 	width: 5px;
@@ -385,8 +392,11 @@ p {
 	border-radius: 2px;
 }
 
+
+
 /*PARA HACERLO RESPONSIVE EN PANTALLAS MAS PEQUEÑAS*/
 
+/*----------------portada---------------*/
 @media only screen and (max-width: 1150px) {
 	h2 {
 	padding-left: 40%;
@@ -398,7 +408,7 @@ p {
 }
 
 @media only screen and (max-width: 1000px) {
-	.portada{
+	.slider__portada{
 	background-color: black;
 	width: 100%;
 	/*height: 100vh;*/
@@ -438,7 +448,7 @@ h2 {
 	display: flex;
 	object-position: center;
 }
-
+/*----------------teatro---------------*/
 	.galeriaImagenes{
 	display: grid;
 	padding-top: 50px;
@@ -456,10 +466,29 @@ h2 {
 .fondo{
 	padding-top: 15%;
 }
+
+/* PÁGINAS DE CADA OBRA*/
+
+
+.picture{
+	width: 55vw;
+	padding: 0;
+	margin: 0;
+	overflow: scroll;
+}
+
+.descripcion {
+	width: 40vw; 
+	padding-left: 10px;
+	text-align: justify;
+	height: 88vh;
+	overflow: scroll;
+}
 }
 
 @media only screen and (max-width: 768px) {
 
+/*----------------portada---------------*/
 h1 {
 	font-weight: 700; 
 	font-size: 15px;
@@ -473,22 +502,22 @@ h1 {
 }
 
 
-.portada{
+.slider__portada{
 	background-color: black;
 	width: 100%;
 	/*height: 100%;*/
-	background-image: url(../imagenes/anomaliam.jpg);
+	background-image: url(../imagenes/anomalia1.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
 .seccion_animacion{
-	width: 70%;
+	width: 50%;
 	margin-top: 10%;
-	margin-bottom: 10%;
 	float: right;
-
 }
+
+
 
 	h2 {
 	color: #ffffff;
@@ -512,6 +541,7 @@ h1 {
 	object-position: center;
 }
 
+/*----------------teatro---------------*/
 	.galeriaImagenes{
 	display: grid;
 	padding-top: 50px;
@@ -529,7 +559,45 @@ h1 {
 #carouselExampleInterval{
 	height: 500%;
 }
+
+/*----------------publi---------------*/
+.galeriaImagenes1 {
+	background-color: $b;
+	display: grid;
+	padding-top: 10px;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	align-items: end;
+	justify-items: center;
+	overflow: hidden; 
+		.image{
+			max-width: 90vw;
+			padding: 0;
+			margin: 0;
+			overflow: hidden; }
+
 }
+}
+/* PÁGINAS DE CADA OBRA*/
+
+
+.picture{
+	width: 55vw;
+	padding: 0;
+	margin: 0;
+	overflow: scroll;
+}
+
+.descripcion {
+	width: 40vw; 
+	padding-left: 10px;
+	text-align: justify;
+	height: 88vh;
+	overflow: scroll;
+}
+
+
+
 
 /* PAGINA DE CONTACTO*/
 
@@ -587,7 +655,7 @@ h1 {
 }
 
 
-.portada{
+.slider__portada{
 	background-color: black;
 	width: 100%;
 	/*height: 100%;*/
@@ -650,36 +718,44 @@ h1 {
 			overflow: hidden; }
 
 }
-}
-/*ESPECIFICO DE LA PÁGINA DE PUBLI*/
 
+/*-----------------PAGINA DE CADA OBRA Y PERFIL --------------*/
 
-/*.publi{
-	padding-top: 50px;
+.detail{
 	width: 100vw;
 	display: flex;
-
-	
-}
-
-.videos{
-	height: 65vh;
-	
-}
-	
-.detalle{
-	width: 27vw; 
-	padding: 10px 20px;
-	text-align: justify;
-	height: 65vh;
-	
-}*/
-
-
-/*.obra{
-	padding: 0px;
+	padding-top: 8vh;
 	margin: 0;
-	overflow: hidden;
+	flex-direction: column-reverse;
 
-}*/
+}
+
+.grafica{
+	width: 100vw;
+	height: 50vh;
+	overflow: scroll;
+	
+}
+
+
+
+.picture{
+	width: 100vw;
+	padding: 0;
+	margin: 0;
+	
+}
+
+.descripcion {
+	width: 90vw; 
+	padding-left: 10px;
+	text-align: justify;
+	height: 88vh;
+	
+}
+
+
+
+
+}
 
